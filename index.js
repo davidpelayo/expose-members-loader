@@ -1,6 +1,7 @@
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
+	Author David Pelayo @ddpelayo
+	Extended expose-loader created by Tobias Koppers @sokra
 */
 
 function getMultipleExposers(query) {
@@ -62,7 +63,7 @@ module.exports.pitch = function(remainingRequest) {
 			var namespacedExposers = exposers[i].split('.');
 
 			if (namespacedExposers.length > 0) {
-				/* 
+				/*
 					remainingRequest,
 					exposers from the initial request, like ?a.x.y.z,b,c
 					i -> current exposer [a.x.y.z, b, c]

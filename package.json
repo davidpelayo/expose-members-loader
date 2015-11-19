@@ -1,6 +1,6 @@
 {
   "name": "expose-members-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "David Pelayo @ddpelayo",
   "description": "Expose members loader module for webpack",
   "dependencies": {},
