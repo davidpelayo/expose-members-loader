@@ -1,4 +1,28 @@
-# expose loader for webpack
+# Expose Members loader for webpack
+
+## Inspiration
+
+I was using the [Expose loader for webpack](https://github.com/webpack/expose-loader), because I simply needed to expose some of the variables of legacy code (now served with Webpack and adapted to an ES6 approach) to the `window` scope.
+
+Rapidly I realized that needed to use the [Exports loader](https://github.com/webpack/exports-loader) together with the [Expose loader for webpack](https://github.com/webpack/expose-loader), until I reached the point where by exporting several members of a module, I needed to declared all of them individually to the global scope.
+
+Like:
+
+```javascript
+import 'expose?mySpace.functionA,mySpace.functionB,objectA!exports?functionA,functionB,objectA!imports?Something=>window.something!legacy/javascript/app';
+```
+
+Of course I could have done twice or more the same import using only one default `exports` together with an `expose`, like:
+
+```javascript
+import 'expose?mySpace.functionA!exports?functionA!legacy/javascript/app';
+import 'expose?mySpace.functionB!exports?functionB!legacy/javascript/app';
+import 'expose?objectA!exports?objectA!legacy/javascript/app';
+```
+
+But that's not exactly the proper way to solve it. So decided to extend the original [Expose loader for webpack](https://github.com/webpack/expose-loader).
+
+Feel free to give feedback.
 
 ## Usage
 
