@@ -6,12 +6,32 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git@github.com:davidpelayo/expose-members-loader.git"
+    "url": "git+ssh://git@github.com/davidpelayo/expose-members-loader.git"
   },
   "licenses": [
     {
       "type": "MIT",
       "url": "http://www.opensource.org/licenses/mit-license.php"
     }
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/davidpelayo/expose-members-loader/issues"
+  },
+  "homepage": "https://github.com/davidpelayo/expose-members-loader#readme",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "expose",
+    "expose-members",
+    "expose-loader",
+    "loader",
+    "webpack",
+    "webpack-loader",
+    "es6",
+    "modules"
+  ],
+  "license": "MIT"
 }
