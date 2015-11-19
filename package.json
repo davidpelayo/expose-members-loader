@@ -1,0 +1,17 @@
+{
+  "name": "expose-members-loader",
+  "version": "0.0.1",
+  "author": "David Pelayo @ddpelayo",
+  "description": "Expose members loader module for webpack",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:davidpelayo/expose-members-loader.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ]
+}
