@@ -26,14 +26,14 @@ Feel free to give feedback.
 
 ## Usage
 
-``` javascript
+```javascript
 require("expose-members?memberA,memberB!./file.js");
 // Exposes the export members for file.js to the global context on properties "memberA" and "memberB".
 // In web browsers, window.memberA and window.memberB is then available.
 ```
 This line works to expose React.PropTypes to the web browser:
 
-```
+```javascript
 require("expose-members?PropTypes!react");
 ```
 
@@ -41,7 +41,7 @@ Thus, `window.PropTypes` is then available to any extension that wants to use it
 
 Alternately, you can set this in your config file:
 
-```
+```javascript
 module: {
   loaders: [
     { test: require.resolve("react"), loader: "expose-members?PropTypes" }
@@ -49,7 +49,7 @@ module: {
 }
 ```
 Also for multiple expose you can use `!` in loader string:
-```
+```javascript
 module: {
   loaders: [
     { test: require.resolve("myModule"), loader: "expose-members?memberA2,memberB2!expose?memberA1,memberB1" },
@@ -58,7 +58,7 @@ module: {
 ```
 
 You could also namespace the exposers you want like follows:
-```
+```javascript
 module: {
   loaders: [
     { test: require.resolve("react"), loader: "expose-members?myNamespace.memberA,myNamespace.memberB" }
