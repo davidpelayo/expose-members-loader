@@ -9,15 +9,15 @@ Rapidly I realized that needed to use the [Exports loader](https://github.com/we
 Like:
 
 ```javascript
-import 'expose?mySpace.functionA,mySpace.functionB,objectA!exports?functionA,functionB,objectA!imports?Something=>window.something!legacy/javascript/app';
+import 'expose-members?mySpace.functionA,mySpace.functionB,objectA!exports?functionA,functionB,objectA!imports?Something=>window.something!legacy/javascript/app';
 ```
 
 Of course I could have done twice or more the same import using only one default `exports` together with an `expose`, like:
 
 ```javascript
-import 'expose?mySpace.functionA!exports?functionA!legacy/javascript/app';
-import 'expose?mySpace.functionB!exports?functionB!legacy/javascript/app';
-import 'expose?objectA!exports?objectA!legacy/javascript/app';
+import 'expose-members?mySpace.functionA!exports?functionA!legacy/javascript/app';
+import 'expose-members?mySpace.functionB!exports?functionB!legacy/javascript/app';
+import 'expose-members?objectA!exports?objectA!legacy/javascript/app';
 ```
 
 But that's not exactly the proper way to solve it. So decided to extend the original [Expose loader for webpack](https://github.com/webpack/expose-loader).
@@ -52,7 +52,7 @@ Also for multiple expose you can use `!` in loader string:
 ```javascript
 module: {
   loaders: [
-    { test: require.resolve("myModule"), loader: "expose-members?memberA2,memberB2!expose?memberA1,memberB1" },
+    { test: require.resolve("myModule"), loader: "expose-members?memberA2,memberB2!expose-members?memberA1,memberB1" },
   ]
 }
 ```
